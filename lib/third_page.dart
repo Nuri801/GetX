@@ -114,6 +114,28 @@ class ThirdPage extends StatelessWidget {
               )),
             ),
           ),
+          GestureDetector(
+            onTap: () {
+
+              listController.setValues(Get.find<TapController>().z);
+              // controller.increaseY();
+              // Get.to(()=> MyHomePage());
+
+            },
+            child: Container(
+              margin: const EdgeInsets.all(20),
+              width: double.maxFinite,
+              height: 50,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Color(0xFF89dad0)),
+              child: Center(
+                  child: Text(
+                    "Save total",
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  )),
+            ),
+          ),
         ],
       ),
     );

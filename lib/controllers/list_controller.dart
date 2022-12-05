@@ -7,5 +7,6 @@ class ListController extends GetxController{
 
   void setValues(int x) {
     _list.add(x);
+    print(_list);
   }
 }
