@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_x_state/my_home_page.dart';
+import 'controllers/list_controller.dart';
 import 'controllers/tap_controller.dart';
 
 class ThirdPage extends StatelessWidget {
@@ -9,7 +10,10 @@ class ThirdPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TapController controller = Get.find();
+
+    // TapController controller = Get.find();
+    //Our second, list, controller dependency injection here:
+    ListController listController = Get.put(ListController());
 
     return Scaffold(
       body: Column(
