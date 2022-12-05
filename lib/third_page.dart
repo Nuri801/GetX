@@ -9,36 +9,52 @@ class ThirdPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    // TapController controller = Get.find();
+    TapController controller = Get.find();
 
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          GestureDetector(
-            onTap: () {
-              // controller.increaseX();
-              Get.to(()=> MyHomePage());
+          GetBuilder<TapController>(
+            builder: (_) {
+              return Container(
+                margin: const EdgeInsets.all(20),
+                width: double.maxFinite,
+                height: 100,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Color(0xFF89dad0),
+                ),
+                child: Center(
+                  child: Text(
+                    "X + Y value: " + Get.find<TapController>().z.toString(),
+                    style: TextStyle(fontSize: 20, color: Colors.white),
+                  ),
+                ),
+              );
             },
-            child: Container(
+          ),
+          Obx(
+            () => Container(
               margin: const EdgeInsets.all(20),
               width: double.maxFinite,
               height: 100,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Color(0xFF89dad0)
+                borderRadius: BorderRadius.circular(20),
+                color: Color(0xFF89dad0),
               ),
-              child: Center(child: Text("X value: " + Get.find<TapController>().x.toString(), style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white
-              ),)),
+              child: Center(
+                child: Text(
+                  "Y value: " + Get.find<TapController>().y.value.toString(),
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+              ),
             ),
           ),
           GestureDetector(
             onTap: () {
               // controller.increaseX();
-              Get.to(()=> MyHomePage());
+              Get.to(() => MyHomePage());
             },
             child: Container(
               margin: const EdgeInsets.all(20),
@@ -46,14 +62,54 @@ class ThirdPage extends StatelessWidget {
               height: 100,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
-                  color: Color(0xFF89dad0)
-              ),
-              child: Center(child: Text("X value: " + Get.find<TapController>().x.toString(), style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.white
-              ),)),
+                  color: Color(0xFF89dad0)),
+              child: Center(
+                  child: Text(
+                "X value: " + Get.find<TapController>().x.toString(),
+                style: TextStyle(fontSize: 20, color: Colors.white),
+              )),
             ),
-          )
+          ),
+          GestureDetector(
+            onTap: () {
+              Get.find<TapController>().increaseY();
+              // controller.increaseY();
+              // Get.to(()=> MyHomePage());
+            },
+            child: Container(
+              margin: const EdgeInsets.all(20),
+              width: double.maxFinite,
+              height: 100,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Color(0xFF89dad0)),
+              child: Center(
+                  child: Text(
+                "Increase Y",
+                style: TextStyle(fontSize: 20, color: Colors.white),
+              )),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Get.find<TapController>().totalXY();
+              // controller.increaseY();
+              // Get.to(()=> MyHomePage());
+            },
+            child: Container(
+              margin: const EdgeInsets.all(20),
+              width: double.maxFinite,
+              height: 100,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Color(0xFF89dad0)),
+              child: Center(
+                  child: Text(
+                "Total Y+X",
+                style: TextStyle(fontSize: 20, color: Colors.white),
+              )),
+            ),
+          ),
         ],
       ),
     );

@@ -9,6 +9,15 @@ class TapController extends GetxController {
 
   RxInt get y => _y;
 
+  int _z=0;
+  int get z=>_z;
+
+  void totalXY(){
+    _z = x+_y.value;
+    update();
+    print(_z);
+  }
+
   void increaseX() {
     _x++;
     update();
