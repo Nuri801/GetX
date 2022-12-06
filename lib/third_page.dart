@@ -24,7 +24,7 @@ class ThirdPage extends StatelessWidget {
               return Container(
                 margin: const EdgeInsets.all(20),
                 width: double.maxFinite,
-                height: 100,
+                height: 50,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   color: Color(0xFF89dad0),
