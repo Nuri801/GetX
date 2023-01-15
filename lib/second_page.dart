@@ -16,7 +16,6 @@ class SecondPage extends StatelessWidget {
         children: [
           GestureDetector(
             onTap: () {
-              // controller.increaseX();
               Get.to(() => ThirdPage());
             },
             child: Container(
