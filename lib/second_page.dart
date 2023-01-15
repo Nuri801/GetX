@@ -10,8 +10,6 @@ class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    // TapController controller = Get.find();
-
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
