@@ -10,15 +10,12 @@ class SecondPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    // TapController controller = Get.find();
-
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           GestureDetector(
             onTap: () {
-              // controller.increaseX();
               Get.to(() => ThirdPage());
             },
             child: Container(

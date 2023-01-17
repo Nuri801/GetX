@@ -123,7 +123,6 @@ class ThirdPage extends StatelessWidget {
 
               listController.setValues(Get.find<TapController>().z);
               // controller.increaseY();
-              // Get.to(()=> MyHomePage());
 
             },
             child: Container(
