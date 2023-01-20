@@ -11,7 +11,7 @@ class ThirdPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    TapController controller = Get.find();
+    // TapController controller = Get.find();
     //Our second, list, controller dependency injection here:
     ListController listController = Get.put(ListController());
 
@@ -31,17 +31,13 @@ class ThirdPage extends StatelessWidget {
                 ),
                 child: Center(
                   child: Text(
-                    "X + Y value: " + controller.z.toString(),
-
-                    // "X + Y value: " + Get.find<TapController>().z.toString(),
+                    "X + Y value: " + Get.find<TapController>().z.toString(),
                     style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
                 ),
               );
             },
           ),
-
-
           Obx(
             () => Container(
               margin: const EdgeInsets.all(20),
@@ -123,10 +119,7 @@ class ThirdPage extends StatelessWidget {
 
               listController.setValues(Get.find<TapController>().z);
               // controller.increaseY();
-
-
-
-
+              
             },
             child: Container(
               margin: const EdgeInsets.all(20),
