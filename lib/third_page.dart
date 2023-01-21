@@ -122,6 +122,8 @@ class ThirdPage extends StatelessWidget {
             },
             child: Container(
               margin: const EdgeInsets.all(20),
+
+
               width: double.maxFinite,
               height: 50,
               decoration: BoxDecoration(
