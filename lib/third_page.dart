@@ -10,7 +10,6 @@ class ThirdPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     // TapController controller = Get.find();
     //Our second, list, controller dependency injection here:
     ListController listController = Get.put(ListController());
@@ -116,10 +115,8 @@ class ThirdPage extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-
               listController.setValues(Get.find<TapController>().z);
               // controller.increaseY();
-              
             },
             child: Container(
               margin: const EdgeInsets.all(20),
@@ -129,10 +126,12 @@ class ThirdPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   color: Color(0xFF89dad0)),
               child: Center(
-                  child: Text(
-                    "Save total",
-                    style: TextStyle(fontSize: 20, color: Colors.white),
-                  )),
+
+                child: Text(
+                  "Save total",
+                  style: TextStyle(fontSize: 20, color: Colors.white),
+                ),
+              ),
             ),
           ),
         ],
