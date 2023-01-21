@@ -74,6 +74,8 @@ class ThirdPage extends StatelessWidget {
             ),
           ),
           GestureDetector(
+
+
             onTap: () {
               Get.find<TapController>().increaseY();
               // controller.increaseY();
