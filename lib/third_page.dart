@@ -120,12 +120,8 @@ class ThirdPage extends StatelessWidget {
               listController.setValues(Get.find<TapController>().z);
               // controller.increaseY();
             },
-
-
             child: Container(
               margin: const EdgeInsets.all(20),
-
-
               width: double.maxFinite,
               height: 50,
               decoration: BoxDecoration(
