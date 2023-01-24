@@ -128,7 +128,6 @@ class ThirdPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(20),
                   color: Color(0xFF89dad0)),
               child: Center(
-
                 child: Text(
                   "Save total",
                   style: TextStyle(fontSize: 20, color: Colors.white),
