@@ -130,8 +130,6 @@ class ThirdPage extends StatelessWidget {
               child: Center(
 
                 child: Text(
-
-
                   "Save total",
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
