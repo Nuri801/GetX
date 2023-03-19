@@ -73,6 +73,7 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
             GestureDetector(
+
               onTap: () {
                 Get.to(() => FirstPage());
               },
