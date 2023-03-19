@@ -76,6 +76,7 @@ class MyHomePage extends StatelessWidget {
 
               onTap: () {
                 Get.to(() => FirstPage());
+
               },
               child: Container(
                 margin: const EdgeInsets.all(20),
